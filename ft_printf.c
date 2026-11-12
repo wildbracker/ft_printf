@@ -12,22 +12,17 @@
 
 #include "ft_printf.h"
 
-int ft_printf(const char *format, ...){
-    va_list ap;
-    int i, j;
-    va_start(ap, format);
+int ft_printf(const char *format, ...)
+{
+	va_list	ap;
+	int	i;
+	va_start(ap, format);
 
-    i = 0;
-    j = 0;
-    while (format[i])
-    {
-        if (i[format] == '%'){
-            if(format[i+1] == 'c')
-                ft_putchar_fd(format[i+1], 1);
-            else if(format[i+1] == 's')
-		ft_putstr_fd(format[i+1], 1);
-
-        }
-    }
-    
+	while (i[format])
+	{
+		if (format[i++] == '%')
+			i += put(ap, i[format]);
+	}
+	va_end(ap);
+	return i;
 }
