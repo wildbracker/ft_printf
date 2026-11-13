@@ -6,7 +6,7 @@
 /*   By: amalaini <amalaini@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/11 11:26:14 by amalaini          #+#    #+#             */
-/*   Updated: 2026/11/13 09:28:14 by amalaini         ###   ########.fr       */
+/*   Updated: 2026/11/13 17:03:19 by amalaini         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,8 +16,10 @@
 #include <stdarg.h>
 
 int put(va_list ap, char c);
-int puthex(int a);
+int ft_putchar(char c);
+int puthex(int a, const char *base);
 int putnbr(int a);
+int putunbr(unsigned int a);
 int putpntr(long a);
 int putstr(char *s);
 int ft_printf(const char *format, ...);
