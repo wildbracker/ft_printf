@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_printf.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: amalaini <amalaini@student.1337.ma>        +#+  +:+       +#+        */
+/*   By: amalaini <amalaini@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/11 12:09:33 by amalaini          #+#    #+#             */
-/*   Updated: 2026/11/11 12:28:32 by amalaini         ###   ########.fr       */
+/*   Updated: 2026/11/13 09:29:41 by amalaini         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,15 +14,23 @@
 
 int ft_printf(const char *format, ...)
 {
-	va_list	ap;
-	int	i;
-	va_start(ap, format);
+    va_list ap;
+    int i;
+    int j;
 
-	while (i[format])
-	{
-		if (format[i++] == '%')
-			i += put(ap, i[format]);
-	}
-	va_end(ap);
-	return i;
+    va_start(ap, format);
+    i = 0;
+    j = 0;
+    while (format[i])
+    {
+        if (format[i++] == '%')
+        {
+            j += put(ap, format[i]);
+            i++;
+            continue;
+        }
+        ft_putchar_fd(format[i++], 1);
+    }
+    va_end(ap);
+    return i;
 }
