@@ -6,7 +6,7 @@
 /*   By: amalaini <amalaini@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/13 16:35:28 by amalaini          #+#    #+#             */
-/*   Updated: 2026/11/14 00:20:40 by amalaini         ###   ########.fr       */
+/*   Updated: 2026/11/14 14:45:36 by amalaini         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,6 +28,7 @@ int putnbr(int n)
     int i;
 
     a = n;
+    i = 0;
     if (a < 0)
     {
         i += ft_putchar('-');
@@ -36,7 +37,7 @@ int putnbr(int n)
     if (a >= 10)
         i += putnbr(a / 10);
     i += ft_puchar(a % 10 + '0');
-    if (i - dc(a))
+    if ((i - dc(a) && n > 0) || (i - dc(a) - 1 && n < 0))
         return -1;
     return i;
 }
