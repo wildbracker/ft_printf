@@ -6,13 +6,13 @@
 /*   By: amalaini <amalaini@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/13 16:35:38 by amalaini          #+#    #+#             */
-/*   Updated: 2026/11/13 17:08:56 by amalaini         ###   ########.fr       */
+/*   Updated: 2026/11/16 14:38:59 by amalaini         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-int putstr(char *c)
+int	putstr(char *c)
 {
-    return (write(1, c, ft_strlen(c)));
+	return (write(1, c, ft_strlen(c)));
 }
