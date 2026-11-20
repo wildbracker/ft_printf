@@ -6,7 +6,7 @@
 /*   By: amalaini <amalaini@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/13 09:15:25 by amalaini          #+#    #+#             */
-/*   Updated: 2026/11/16 14:38:52 by amalaini         ###   ########.fr       */
+/*   Updated: 2026/11/20 10:30:27 by amalaini         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 int	put(va_list ap, char c)
 {
 	if (c == 'c')
-		return (ft_putchar(va_arg(ap, char)));
+		return (ft_putchar(va_arg(ap, int)));
 	else if (c == 's')
 		return (putstr(va_arg(ap, char *)));
 	else if (c == 'd' || c == 'i')

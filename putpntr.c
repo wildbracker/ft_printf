@@ -6,7 +6,7 @@
 /*   By: amalaini <amalaini@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/13 16:35:35 by amalaini          #+#    #+#             */
-/*   Updated: 2026/11/19 11:07:43 by amalaini         ###   ########.fr       */
+/*   Updated: 2026/11/20 10:33:06 by amalaini         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,7 +49,7 @@ int	putpntr(long n)
 	i = 0;
 	i += putstr("0x");
 	i += putlhex(n, "0123456789abcdef");
-	if ((i != lhdc + 2 && n >= 0) || (i != lhdc + 3 && n < 0))
+	if ((i != lhdc(n) + 2 && n >= 0) || (i != lhdc(n) + 3 && n < 0))
 		return (-1);
 	return (i);
 }

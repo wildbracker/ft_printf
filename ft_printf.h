@@ -6,13 +6,13 @@
 /*   By: amalaini <amalaini@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/11 11:26:14 by amalaini          #+#    #+#             */
-/*   Updated: 2026/11/16 14:39:25 by amalaini         ###   ########.fr       */
+/*   Updated: 2026/11/20 10:59:00 by amalaini         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef FT_PRINTF_H
 # define FT_PRINTF_H
-# include "libft/libft.h"
+#include <unistd.h>
 # include <stdarg.h>
 
 int	put(va_list ap, char c);

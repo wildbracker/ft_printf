@@ -6,7 +6,7 @@
 /*   By: amalaini <amalaini@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/13 16:35:32 by amalaini          #+#    #+#             */
-/*   Updated: 2026/11/19 11:04:45 by amalaini         ###   ########.fr       */
+/*   Updated: 2026/11/20 10:30:57 by amalaini         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ int	hdc(int n)
 	return (i);
 }
 
-int	puthex(int n, char *base)
+int	puthex(int n,const char *base)
 {
 	long a;
 	int i;

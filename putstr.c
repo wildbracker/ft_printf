@@ -6,7 +6,7 @@
 /*   By: amalaini <amalaini@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/13 16:35:38 by amalaini          #+#    #+#             */
-/*   Updated: 2026/11/16 14:38:59 by amalaini         ###   ########.fr       */
+/*   Updated: 2026/11/20 10:53:50 by amalaini         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,5 +14,10 @@
 
 int	putstr(char *c)
 {
-	return (write(1, c, ft_strlen(c)));
+	int	len;
+
+	len = 0;
+	while (c[len++])
+		;
+	return (write(1, c, len));
 }

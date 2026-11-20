@@ -6,7 +6,7 @@
 /*   By: amalaini <amalaini@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/13 16:35:22 by amalaini          #+#    #+#             */
-/*   Updated: 2026/11/19 10:56:43 by amalaini         ###   ########.fr       */
+/*   Updated: 2026/11/20 11:05:13 by amalaini         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ int	putunbr(unsigned int n)
 	i = 0;
 	if (n >= 10)
 		i += putunbr(n / 10);
-	i += ft_putchar(n - '0');
+	i += ft_putchar(n % 10 + '0');
 	if (i - udc(n))
 		return (-1);
 	return (i);
