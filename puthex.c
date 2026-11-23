@@ -6,7 +6,7 @@
 /*   By: amalaini <amalaini@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/13 16:35:32 by amalaini          #+#    #+#             */
-/*   Updated: 2026/11/20 10:30:57 by amalaini         ###   ########.fr       */
+/*   Updated: 2026/11/23 15:31:23 by amalaini         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ int	hdc(int n)
 	return (i);
 }
 
-int	puthex(int n,const char *base)
+int	puthex(int n, char *base)
 {
 	long a;
 	int i;
@@ -34,7 +34,7 @@ int	puthex(int n,const char *base)
 		i += ft_putchar('-');
 		a = -a;
 	}
-	if (a >= 0)
+	if (a >= 16)
 		i += puthex(a / 16, base);
 	i += ft_putchar(base[a % 16]);
 	if ((i - hdc(a) && n >= 0) || (i - hdc(a) - 1 && n < 0))
