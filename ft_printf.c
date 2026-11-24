@@ -6,7 +6,7 @@
 /*   By: amalaini <amalaini@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/11 12:09:33 by amalaini          #+#    #+#             */
-/*   Updated: 2026/11/20 10:45:33 by amalaini         ###   ########.fr       */
+/*   Updated: 2026/11/23 23:11:26 by amalaini         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,10 +31,10 @@ int	ft_printf(const char *format, ...)
 			i++;
 			continue ;
 		}
+		j += ft_putchar(format[i++]);
 		if (tmp > j)
 			return (-1);
-		i += ft_putchar(format[i]);
 	}
 	va_end(ap);
-	return (i + j);
+	return (j);
 }

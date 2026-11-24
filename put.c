@@ -6,7 +6,7 @@
 /*   By: amalaini <amalaini@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/13 09:15:25 by amalaini          #+#    #+#             */
-/*   Updated: 2026/11/22 16:20:23 by amalaini         ###   ########.fr       */
+/*   Updated: 2026/11/23 23:55:24 by amalaini         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,9 @@
 
 int	put(va_list ap, char c)
 {
-	char base1[] = "0123456789abcdef";
+	char	base1[] = "0123456789abcdef";
+	char	base2[] = "0123456789ABCDEF";
+
 	if (c == 'c')
 		return (ft_putchar(va_arg(ap, int)));
 	else if (c == 's')
@@ -24,9 +26,9 @@ int	put(va_list ap, char c)
 	else if (c == 'u')
 		return (putunbr(va_arg(ap, unsigned int)));
 	else if (c == 'x')
-		return (puthex(va_arg(ap, int), base1));
+		return (puthex(va_arg(ap, unsigned int), base1));
 	else if (c == 'X')
-		return (puthex(va_arg(ap, int), "0123456789ABCDEF"));
+		return (puthex(va_arg(ap, unsigned int), base2));
 	else if (c == 'p')
 		return (putpntr(va_arg(ap, long)));
 	else if (c == '%')

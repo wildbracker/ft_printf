@@ -6,7 +6,7 @@
 /*   By: amalaini <amalaini@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/13 16:35:35 by amalaini          #+#    #+#             */
-/*   Updated: 2026/11/20 10:33:06 by amalaini         ###   ########.fr       */
+/*   Updated: 2026/11/23 23:57:01 by amalaini         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,34 +22,30 @@ int	lhdc(long n)
 	return (i);
 }
 
-int	putlhex(long n, char *base)
+int	putlhex(unsigned long n)
 {
-	long long	a;
 	int			i;
+	char		base[] = "0123456789abcdef";
 
-	a = n;
 	i = 0;
-	if (a < 0)
-	{
-		i += ft_putchar('-');
-		a = -a;
-	}
-	if (a >= 0)
-		i += putlhex(a / 16, base);
-	i += ft_putchar(base[a % 16]);
-	if ((i - lhdc(a) && n >= 0) || (i - lhdc(a) - 1 && n < 0))
+	if (n >= 16)
+		i += putlhex(n / 16);
+	i += ft_putchar(base[n % 16]);
+	if (i - lhdc(n))
 		return (-1);
 	return (i);
 }
 
-int	putpntr(long n)
+int	putpntr(unsigned long n)
 {
 	int i;
 
 	i = 0;
+	if(!n)
+		return(putstr("(nil)"));
 	i += putstr("0x");
-	i += putlhex(n, "0123456789abcdef");
-	if ((i != lhdc(n) + 2 && n >= 0) || (i != lhdc(n) + 3 && n < 0))
+	i += putlhex(n);
+	if (i != lhdc(n) + 2 )
 		return (-1);
 	return (i);
 }
