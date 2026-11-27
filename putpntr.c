@@ -6,13 +6,13 @@
 /*   By: amalaini <amalaini@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/13 16:35:35 by amalaini          #+#    #+#             */
-/*   Updated: 2026/11/23 23:57:01 by amalaini         ###   ########.fr       */
+/*   Updated: 2026/11/26 23:58:21 by amalaini         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-int	lhdc(long n)
+int	lhdc(unsigned long n)
 {
 	int	i;
 
@@ -30,9 +30,9 @@ int	putlhex(unsigned long n)
 	i = 0;
 	if (n >= 16)
 		i += putlhex(n / 16);
-	i += ft_putchar(base[n % 16]);
-	if (i - lhdc(n))
+	if (i != lhdc(n) - 1)
 		return (-1);
+	i += ft_putchar(base[n % 16]);
 	return (i);
 }
 

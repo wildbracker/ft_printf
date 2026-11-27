@@ -6,13 +6,13 @@
 /*   By: amalaini <amalaini@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/13 16:35:32 by amalaini          #+#    #+#             */
-/*   Updated: 2026/11/23 23:32:55 by amalaini         ###   ########.fr       */
+/*   Updated: 2026/11/26 23:55:43 by amalaini         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-int	hdc(int n)
+int	hdc(unsigned int n)
 {
 	int	i;
 

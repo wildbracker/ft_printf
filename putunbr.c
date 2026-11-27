@@ -6,13 +6,13 @@
 /*   By: amalaini <amalaini@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/13 16:35:22 by amalaini          #+#    #+#             */
-/*   Updated: 2026/11/23 23:57:55 by amalaini         ###   ########.fr       */
+/*   Updated: 2026/11/26 23:51:40 by amalaini         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-int	udc(int n)
+int	udc(unsigned int n)
 {
 	int	i;
 
@@ -29,8 +29,8 @@ int	putunbr(unsigned int n)
 	i = 0;
 	if (n >= 10)
 		i += putunbr(n / 10);
-	i += ft_putchar(n % 10 + '0');
-	if (i - udc(n))
+	if (i != udc(n) - 1)
 		return (-1);
+	i += ft_putchar(n % 10 + '0');
 	return (i);
 }
