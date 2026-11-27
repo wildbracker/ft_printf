@@ -6,7 +6,7 @@
 /*   By: amalaini <amalaini@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/11 12:09:33 by amalaini          #+#    #+#             */
-/*   Updated: 2026/11/27 00:32:19 by amalaini         ###   ########.fr       */
+/*   Updated: 2026/11/27 15:00:58 by amalaini         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,6 +32,8 @@ int	ft_printf(const char *format, ...)
 	va_start(ap, format);
 	i = 0;
 	j = 0;
+	if(!format || format[ft_strlen(format)-2] == '%')
+		return (va_end(ap), -1);
 	while (format[i])
 	{
 		tmp = j;
